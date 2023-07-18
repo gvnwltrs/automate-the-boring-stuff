@@ -2,7 +2,7 @@
 # pw.py - An insecure password locker program. 
 
 import sys
-# import pyperclip
+import pyperclip
 
 class PWLocker:
     
@@ -23,7 +23,7 @@ class PWLocker:
     
     def is_account_authorized(self):
         if self.account in self.PASSWORDS:
-            # pyperclip.copy(self.PASSWORDS[self.account])
+            pyperclip.copy(self.PASSWORDS[self.account])
             print('Password for {0} copied to clipboard'.format(self.account))
             return True
     
