@@ -22,5 +22,10 @@ class TestPW(unittest.TestCase):
         result = pw_locker.account 
         self.assertIsNotNone(result)
 
+    def test_for_authorized_account(self):
+        pw_locker = PWLocker()
+        result = pw_locker.is_account_authorized()
+        self.assertTrue(result)
+
 if __name__ == '__main__':
     unittest.main()
