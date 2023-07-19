@@ -1,6 +1,7 @@
 #!/usr/bin/env python3 
 
 import pytest
+import sys
 from password_locker.pw import PWLocker
 
 def test_initial():
@@ -20,3 +21,9 @@ def test_for_account_name():
     result = pw_locker.account 
     assert result is not None
 
+def test_for_authorized_accout(monkeypatch):
+    monkeypatch.setattr(sys, 'argv', ['pw.py', 'luggage'])
+
+    pwl = PWLocker()
+    result = pwl.is_account_authorized()
+    assert result == True
