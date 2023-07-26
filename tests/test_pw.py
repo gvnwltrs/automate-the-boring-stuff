@@ -21,7 +21,7 @@ def test_for_account_name():
     result = pw_locker.account 
     assert result is not None
 
-def test_for_authorized_accout(monkeypatch):
+def test_for_authorized_account(monkeypatch):
     monkeypatch.setattr(sys, 'argv', ['pw.py', 'luggage'])
 
     pwl = PWLocker()
