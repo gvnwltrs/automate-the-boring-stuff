@@ -19,3 +19,6 @@ class FilePaths:
     
     def drive_attached(self):
         return os.path.exists('/media/gwalters')
+    
+    def is_file(self, path):
+        return os.path.isfile(path)

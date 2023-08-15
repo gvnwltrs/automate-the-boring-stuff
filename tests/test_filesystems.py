@@ -17,3 +17,8 @@ def test_for_drive_attached():
     fp = FilePaths()
     result = fp.drive_attached()
     assert result
+
+def test_for_is_file():
+    fp = FilePaths()
+    result = fp.is_file('/home/gwalters/test.txt')
+    assert result
