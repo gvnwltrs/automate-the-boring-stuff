@@ -16,3 +16,6 @@ class FilePaths:
     def print_size_of_dir(self):
         print('{0}MB'.format(os.path.getsize(self.path)))
         print('{0}GB'.format(os.path.getsize(self.path)/1024))
+    
+    def drive_attached(self):
+        return os.path.exists('/media/gwalters')

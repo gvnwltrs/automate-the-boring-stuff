@@ -12,3 +12,8 @@ def test_filepath_exists():
     expected = '/home/gwalters/Workspace'
     fp.print_path()
     assert result == expected
+
+def test_for_drive_attached():
+    fp = FilePaths()
+    result = fp.drive_attached()
+    assert result
