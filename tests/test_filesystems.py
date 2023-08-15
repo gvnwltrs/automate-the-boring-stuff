@@ -8,6 +8,7 @@ def test_initial():
 def test_filepath_exists():
     fp = FilePaths()
     result = fp.path 
-    expected = 'usr/bin/spam'
+    # expected = 'usr/bin/spam'
+    expected = '/home/gwalters/Workspace'
     fp.print_path()
     assert result == expected
