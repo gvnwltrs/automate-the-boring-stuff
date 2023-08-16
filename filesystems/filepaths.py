@@ -22,3 +22,18 @@ class FilePaths:
     
     def is_file(self, path):
         return os.path.isfile(path)
+
+    def is_directory(self, path):
+        return os.path.isdir(path)
+
+
+    def write_to_file(self, path, msg): 
+        with open(path, "w") as file:
+            file.write(msg)
+
+    def find_in_file(self, file, search_term):
+        with open(file, "r") as file:
+            for line in file:
+                if search_term in line:
+                    return True
+        return False 
